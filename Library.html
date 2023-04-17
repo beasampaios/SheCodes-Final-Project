@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Store</title>
+    <style>
+      body {
+        background: linear-gradient(#a03b214a, white);
+      }
+      .content {
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 20px 40px;
+      }
+      h1 {
+        text-align: center;
+        color: #b53625e1;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+      }
+      h2 {
+        text-align: center;
+        border: 1px solid #b53625e1;
+        border-radius: 40px;
+        padding: 20px;
+        margin: 100 auto;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      .linkedin {
+        display: block;
+        color: #b53625e1;
+        text-decoration: none;
+      }
+      .linkedin:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background: #b53625e1;
+        color: #e6c0b6;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: 1px solid #b53625e1;
+        border-radius: 40px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 150ms ease-in-out;
+      }
+
+      button:hover {
+        background: #e6c0b6;
+        color: #b53625e1;
+        cursor: pointer;
+      }
+      .book {
+        color: #b53625e1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Love a good book?</h1>
+      <h2>We've got every book you seek</h2>
+      <img
+        src="https://i.pinimg.com/564x/57/43/f8/5743f891c0697d679c669cea7afdf410.jpg"
+        alt="Library"
+      />
+      <p>
+        <strong>How are we?</strong> <br />We are an online
+        <span class="book"> book</span> store, a web application that allows you
+        to buy <span class="book"> books</span> online. From second-hand to new
+        <span class="book"> books</span>, we have it all!
+        <br />
+        Click on the button below and type the name of the
+        <span class="book"> book</span> and its author that you want to buy.
+        After that, we will send you an e-mail with the details and all the
+        information you need to complete your purchase. Finally, we will send
+        the <span class="book"> book</span> to the desired address.
+      </p>
+
+      <button>Search for a book 📖</button>
+      <p class="footer">
+        This page was built by
+        <a
+          href="https://www.linkedin.com/in/beatriz-silva-998277183/"
+          target="_blank"
+          class="linkedin"
+        >
+          <em> Beatriz Silva</em>
+        </a>
+      </p>
+    </div>
+    <script>
+      function book() {
+        let name = prompt("What is your name?");
+        let book = prompt("What book are you looking for? (Name and author)");
+        let email = prompt("What is your email?");
+        if (email.length) {
+          alert(
+            "Thank you, " +
+              name +
+              "! We'll send you an email with all the information needed to purchase " +
+              book +
+              "! 😊"
+          );
+        } else {
+          alert("Please enter your email! 🤨");
+        }
+      }
+
+      let bookSearchButton = document.querySelector("button");
+      bookSearchButton.addEventListener("click", book);
+    </script>
+  </body>
+</html>
